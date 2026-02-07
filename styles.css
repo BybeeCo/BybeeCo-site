@@ -80,6 +80,11 @@ a:hover{ text-decoration: underline; }
   flex: 0 0 44px;
 }
 
+.hero img{
+  max-width: min(520px, 90vw);
+  height: auto;
+}
+
 .brand-text{ display:flex; flex-direction:column; gap:2px; }
 .brand-name{ font-weight: 700; font-size: 18px; letter-spacing: .2px; }
 .brand-subtitle{ color: var(--muted); font-size: 13px; }
