@@ -44,13 +44,28 @@
         </div>
       </div>
 
-      <nav class="nav" aria-label="Primary">
-        <a data-nav href="#home">Home</a>
-        <a data-nav href="#services">Services</a>
-        <a data-nav href="#approach">Approach</a>
-        <a data-nav href="#about">About</a>
-        <a class="btn btn-outline" href="mailto:chandler@bybeeco.net">Contact</a>
-      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+  <span></span><span></span><span></span>
+</button>
+
+<nav class="nav" aria-label="Primary">
+  <a data-nav href="#home">Home</a>
+  <a data-nav href="#services">Services</a>
+  <a data-nav href="#approach">Approach</a>
+  <a data-nav href="#about">About</a>
+  <a class="btn btn-outline" href="mailto:chandler@bybeeco.net">Contact</a>
+</nav>
+
+<!-- Mobile menu -->
+<div class="menu-overlay" id="menuOverlay" hidden></div>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile" hidden>
+  <a data-nav href="#home">Home</a>
+  <a data-nav href="#services">Services</a>
+  <a data-nav href="#approach">Approach</a>
+  <a data-nav href="#about">About</a>
+  <a href="mailto:chandler@bybeeco.net">Contact</a>
+</nav>
+
     </div>
   </header>
 
