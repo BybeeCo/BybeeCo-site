@@ -3,29 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>BybeeCo — Applied Systems & Automation</title>
   <meta name="description" content="BybeeCo designs and deploys practical automation, AI-assisted workflows, and internal business systems using Microsoft’s Power Platform." />
 
-  <!-- Favicons / App -->
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <!-- High-quality primary icon (PUT your original PNG at /bybeeco-icon.png) -->
+  <link rel="icon" type="image/png" sizes="512x512" href="/bybeeco-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/bybeeco-icon.png" />
+
+  <!-- Fallbacks (keep these in root too) -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Apple / iOS: point touch icon to the SAME high quality PNG for consistent results -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/bybeeco-icon.png" />
   <meta name="apple-mobile-web-app-title" content="BybeeCo" />
+
   <link rel="manifest" href="/site.webmanifest" />
-  <!-- Primary app icon (force high quality) -->
-<link rel="icon" type="image/png" sizes="512x512" href="/bybeeco-icon.png" />
-
-<!-- Fallbacks -->
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/bybeeco-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
-
-  <!-- Theme -->
   <meta name="theme-color" content="#5B7CFA" />
 
-  <!-- Inter (brand font) -->
+  <!-- Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -37,13 +35,12 @@
   <div class="bg"></div>
 
   <header class="site-header">
-    <div class="container">
+    <div class="header-inner container">
       <div class="brand">
-        <!-- Use your mark as the header icon (swap this src if you prefer another file) -->
-        <img class="mark-img" src="/apple-touch-icon.png" alt="BybeeCo" />
-        <div>
-          <div class="name">BybeeCo</div>
-          <div class="tag">Applied Systems &amp; Automation</div>
+        <img class="brand-mark" src="/bybeeco-icon.png" alt="BybeeCo logo" />
+        <div class="brand-text">
+          <div class="brand-name">BybeeCo</div>
+          <div class="brand-subtitle">Applied Systems &amp; Automation</div>
         </div>
       </div>
 
@@ -52,26 +49,26 @@
         <a data-nav href="#services">Services</a>
         <a data-nav href="#approach">Approach</a>
         <a data-nav href="#about">About</a>
-        <a class="cta" href="mailto:chandler@bybeeco.net">Contact</a>
+        <a class="btn btn-outline" href="mailto:chandler@bybeeco.net">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
+  <main class="container main">
 
-    <!-- HOME VIEW -->
+    <!-- HOME -->
     <section class="view hero is-active" data-view="home" id="home">
       <h1>Practical automation for regulated and professional environments.</h1>
       <p class="lead">
         BybeeCo designs and deploys internal automation, AI-assisted workflows, and business systems using Microsoft’s Power Platform.
       </p>
 
-      <div class="hero-actions">
-        <a class="button primary" href="mailto:chandler@bybeeco.net">Request an intro</a>
-        <a class="button ghost" href="#services" data-nav>See services</a>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:chandler@bybeeco.net">Request an intro</a>
+        <a class="btn btn-ghost" href="#services" data-nav>See services</a>
       </div>
 
-      <div class="badges" aria-label="Capabilities">
+      <div class="pills" aria-label="Capabilities">
         <span>Power Apps</span>
         <span>Dataverse</span>
         <span>Power Automate</span>
@@ -80,73 +77,74 @@
       </div>
     </section>
 
-    <!-- SERVICES VIEW -->
+    <!-- SERVICES -->
     <section class="view section" data-view="services" id="services" hidden>
       <h2>Services</h2>
 
-      <div class="grid">
-        <div class="card">
+      <div class="cards">
+        <article class="card">
           <h3>AI task bots</h3>
           <p>Design and deployment of task-specific bots using Copilot Studio to streamline internal workflows.</p>
-        </div>
-        <div class="card">
+        </article>
+
+        <article class="card">
           <h3>Power Apps + Dataverse systems</h3>
           <p>Custom business apps and data models for tracking work, customers, operations, and compliance-ready processes.</p>
-        </div>
-        <div class="card">
+        </article>
+
+        <article class="card">
           <h3>Document automation</h3>
           <p>Power Automate workflows for intake, approvals, notifications, document generation, and routing.</p>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- APPROACH VIEW -->
+    <!-- APPROACH -->
     <section class="view section" data-view="approach" id="approach" hidden>
       <h2>Approach</h2>
 
-      <div class="split">
-        <div class="card">
+      <div class="cards two">
+        <article class="card">
           <h3>Deployed inside your tenant</h3>
           <p>
             Solutions are built within your existing Microsoft environment. You retain ownership of your data, licenses, and access controls.
           </p>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <h3>Simple, secure, maintainable</h3>
           <p>
             Clear scope. Minimal moving parts. Documentation and handoff designed for long-term support and auditability.
           </p>
-        </div>
+        </article>
       </div>
 
-      <div class="note">
-        <strong>Plain-language policy:</strong> BybeeCo does not host customer data or resell Microsoft licenses. We design, configure, and support solutions within your environment.
+      <div class="callout">
+        <strong>Plain-language policy:</strong>
+        BybeeCo does not host customer data or resell Microsoft licenses. We design, configure, and support solutions within your environment.
       </div>
     </section>
 
-    <!-- ABOUT VIEW -->
+    <!-- ABOUT -->
     <section class="view section" data-view="about" id="about" hidden>
       <h2>About</h2>
 
-      <div class="card">
+      <article class="card">
         <p>
-          BybeeCo is a Missouri-based systems and automation firm founded by Chandler Bybee. The company focuses on practical automation and internal tools for regulated and professional organizations.
+          BybeeCo is a systems and automation firm focused on practical internal tools for regulated and professional organizations.
         </p>
-
-        <p class="contact">
+        <p class="contact-line">
           Email: <a href="mailto:chandler@bybeeco.net">chandler@bybeeco.net</a>
         </p>
-      </div>
+      </article>
     </section>
 
     <footer class="footer">
-      <div>© <span id="year"></span> BybeeCo LLC</div>
+      <div>© <span id="year"></span> BybeeCo</div>
       <div class="footer-links">
         <a href="mailto:chandler@bybeeco.net">Contact</a>
       </div>
     </footer>
-
   </main>
 
   <script>
