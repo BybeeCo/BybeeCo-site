@@ -58,3 +58,40 @@
   window.addEventListener("hashchange", handleHash);
   handleHash();
 })();
+// Mobile menu toggle
+const menuBtn = document.getElementById("menuBtn");
+const menuOverlay = document.getElementById("menuOverlay");
+const mobileMenu = document.getElementById("mobileMenu");
+
+const closeMenu = () => {
+  if (!menuBtn || !menuOverlay || !mobileMenu) return;
+  menuBtn.setAttribute("aria-expanded", "false");
+  menuOverlay.hidden = true;
+  mobileMenu.hidden = true;
+};
+
+const openMenu = () => {
+  if (!menuBtn || !menuOverlay || !mobileMenu) return;
+  menuBtn.setAttribute("aria-expanded", "true");
+  menuOverlay.hidden = false;
+  mobileMenu.hidden = false;
+};
+
+if (menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+    expanded ? closeMenu() : openMenu();
+  });
+}
+
+if (menuOverlay) menuOverlay.addEventListener("click", closeMenu);
+
+// Close menu after navigation
+document.querySelectorAll("#mobileMenu a[data-nav]").forEach((a) => {
+  a.addEventListener("click", closeMenu);
+});
+
+// Close menu on Escape
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
+});
