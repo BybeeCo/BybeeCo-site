@@ -1,12 +1,49 @@
-<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+<svg width="512" height="512" viewBox="0 0 512 512"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background circle -->
   <defs>
-    <linearGradient id="bybeecoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5B7CFA"/>
-      <stop offset="100%" stop-color="#9B6CFF"/>
+    <linearGradient id="leftBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6FA8FF"/>
+      <stop offset="100%" stop-color="#4F63D8"/>
+    </linearGradient>
+
+    <linearGradient id="rightViolet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C8A4FF"/>
+      <stop offset="100%" stop-color="#8B6EDB"/>
     </linearGradient>
   </defs>
 
-  <circle cx="48" cy="48" r="40" fill="url(#bybeecoGradient)"/>
-  <path d="M38 26h12c9 0 16 6 16 14s-7 14-16 14H38zM38 52h13c10 0 17 6 17 14s-7 14-17 14H38z"
-        fill="#0B0F14"/>
+  <!-- Left half -->
+  <clipPath id="leftHalf">
+    <rect x="0" y="0" width="256" height="512"/>
+  </clipPath>
+
+  <!-- Right half -->
+  <clipPath id="rightHalf">
+    <rect x="256" y="0" width="256" height="512"/>
+  </clipPath>
+
+  <circle cx="256" cy="256" r="240" fill="url(#leftBlue)" clip-path="url(#leftHalf)"/>
+  <circle cx="256" cy="256" r="240" fill="url(#rightViolet)" clip-path="url(#rightHalf)"/>
+
+  <!-- Vertical B stem -->
+  <rect x="176" y="96" width="96" height="320" rx="12" fill="#7FAEFF"/>
+
+  <!-- Upper bowl -->
+  <path d="M272 128
+           h64
+           a64 64 0 0 1 0 128
+           h-64
+           z"
+        fill="#1F2430"/>
+
+  <!-- Lower bowl -->
+  <path d="M272 256
+           h72
+           a72 72 0 0 1 0 144
+           h-72
+           z"
+        fill="#1F2430"/>
+
 </svg>
