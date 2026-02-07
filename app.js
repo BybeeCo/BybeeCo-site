@@ -62,6 +62,11 @@
   const menuOverlay = document.getElementById("menuOverlay");
   const mobileMenu = document.getElementById("mobileMenu");
 
+  document.addEventListener("DOMContentLoaded", () => {
+  mobileMenu.hidden = true;
+  menuOverlay.hidden = true;
+});
+
   function closeMenu() {
     if (!menuBtn || !menuOverlay || !mobileMenu) return;
     menuBtn.setAttribute("aria-expanded", "false");
