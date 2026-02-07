@@ -282,6 +282,28 @@ h2{
   border-radius: 2px;
 }
 
+/* Animated mobile menu */
+@media (max-width: 720px){
+  .menu-overlay{
+    opacity: 0;
+    transition: opacity 180ms ease;
+  }
+  .menu-overlay.is-open{
+    opacity: 1;
+  }
+
+  .mobile-menu{
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 220ms ease, opacity 220ms ease;
+    transform-origin: top right;
+  }
+  .mobile-menu.is-open{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 720px){
   .nav{ display: none; }
   .menu-btn{ display: inline-flex; flex-direction: column; }
