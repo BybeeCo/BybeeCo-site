@@ -3,19 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
   <title>BybeeCo — Applied Systems & Automation</title>
+
   <meta name="description" content="BybeeCo designs and deploys practical automation, AI-assisted workflows, and internal business systems using Microsoft’s Power Platform." />
 
-  <!-- Primary icon (use your original PNG at /bybeeco-icon.png) -->
+  <!-- Prefer your HD icon (put it at /bybeeco-icon.png) -->
   <link rel="icon" type="image/png" sizes="512x512" href="/bybeeco-icon.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/bybeeco-icon.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+
+  <!-- Keep generator fallbacks (optional but fine) -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/bybeeco-icon.png" />
   <meta name="apple-mobile-web-app-title" content="BybeeCo" />
   <link rel="manifest" href="/site.webmanifest" />
+
   <meta name="theme-color" content="#5B7CFA" />
 
   <!-- Inter -->
@@ -57,7 +60,7 @@
 
   <!-- Mobile menu -->
   <div class="menu-overlay" id="menuOverlay" hidden></div>
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile menu" hidden>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile" hidden>
     <a data-nav href="#home">Home</a>
     <a data-nav href="#services">Services</a>
     <a data-nav href="#approach">Approach</a>
@@ -66,7 +69,8 @@
   </nav>
 
   <main class="container main">
-    <!-- HOME -->
+
+    <!-- HOME VIEW -->
     <section class="view hero is-active" data-view="home" id="home">
       <h1>Practical automation for regulated and professional environments.</h1>
       <p class="lead">
@@ -87,7 +91,7 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- SERVICES VIEW -->
     <section class="view section" data-view="services" id="services" hidden>
       <h2>Services</h2>
 
@@ -109,19 +113,23 @@
       </div>
     </section>
 
-    <!-- APPROACH -->
+    <!-- APPROACH VIEW -->
     <section class="view section" data-view="approach" id="approach" hidden>
       <h2>Approach</h2>
 
       <div class="cards two">
         <article class="card">
           <h3>Deployed inside your tenant</h3>
-          <p>Solutions are built within your existing Microsoft environment. You retain ownership of your data, licenses, and access controls.</p>
+          <p>
+            Solutions are built within your existing Microsoft environment. You retain ownership of your data, licenses, and access controls.
+          </p>
         </article>
 
         <article class="card">
           <h3>Simple, secure, maintainable</h3>
-          <p>Clear scope. Minimal moving parts. Documentation and handoff designed for long-term support and auditability.</p>
+          <p>
+            Clear scope. Minimal moving parts. Documentation and handoff designed for long-term support and auditability.
+          </p>
         </article>
       </div>
 
@@ -131,7 +139,7 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT VIEW -->
     <section class="view section" data-view="about" id="about" hidden>
       <h2>About</h2>
 
@@ -139,6 +147,7 @@
         <p>
           BybeeCo is a systems and automation firm focused on practical internal tools for regulated and professional organizations.
         </p>
+
         <p class="contact-line">
           Email: <a href="mailto:chandler@bybeeco.net">chandler@bybeeco.net</a>
         </p>
@@ -151,6 +160,7 @@
         <a href="mailto:chandler@bybeeco.net">Contact</a>
       </div>
     </footer>
+
   </main>
 
   <script>
