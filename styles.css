@@ -249,4 +249,23 @@ a:hover{color: var(--accent2); text-decoration: underline;}
   .split{grid-template-columns: 1fr;}
   .nav{gap: 12px;}
   .hero{padding-top: 46px;}
+/* View switching */
+.view {
+  display: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.view.is-active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Active nav state */
+.nav a.is-active {
+  color: var(--text);
+  border-bottom-color: rgba(159,231,255,0.35);
+}
 }
