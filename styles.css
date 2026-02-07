@@ -71,10 +71,13 @@ a:hover{ text-decoration: underline; }
 }
 
 .brand-mark{
-  width: 44px;
-  height: 44px;
-  border-radius: 14px; /* makes it feel app-icon-ish */
-  box-shadow: 0 10px 30px rgba(0,0,0,.30);
+  width: 44px !important;
+  height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  border-radius: 14px;
+  object-fit: cover;
+  flex: 0 0 44px;
 }
 
 .brand-text{ display:flex; flex-direction:column; gap:2px; }
