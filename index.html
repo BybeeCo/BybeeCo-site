@@ -5,14 +5,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>BybeeCo — Applied Systems & Automation</title>
   <meta name="description" content="BybeeCo designs and deploys practical automation, AI-assisted workflows, and internal business systems using Microsoft’s Power Platform." />
-  <meta name="theme-color" content="#0b0f14" />
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicons / App -->
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="BybeeCo" />
-<link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="BybeeCo" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#5B7CFA" />
+
+  <!-- Inter (brand font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -21,24 +31,28 @@
   <header class="site-header">
     <div class="container">
       <div class="brand">
-        <div class="mark" aria-hidden="true"></div>
+        <!-- Use your mark as the header icon (swap this src if you prefer another file) -->
+        <img class="mark-img" src="/apple-touch-icon.png" alt="BybeeCo" />
         <div>
           <div class="name">BybeeCo</div>
-          <div class="tag">Applied Systems & Automation</div>
+          <div class="tag">Applied Systems &amp; Automation</div>
         </div>
       </div>
 
-      <nav class="nav">
-        <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
-        <a href="#about">About</a>
+      <nav class="nav" aria-label="Primary">
+        <a data-nav href="#home">Home</a>
+        <a data-nav href="#services">Services</a>
+        <a data-nav href="#approach">Approach</a>
+        <a data-nav href="#about">About</a>
         <a class="cta" href="mailto:chandler@bybeeco.net">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero">
+
+    <!-- HOME VIEW -->
+    <section class="view hero is-active" data-view="home" id="home">
       <h1>Practical automation for regulated and professional environments.</h1>
       <p class="lead">
         BybeeCo designs and deploys internal automation, AI-assisted workflows, and business systems using Microsoft’s Power Platform.
@@ -46,7 +60,7 @@
 
       <div class="hero-actions">
         <a class="button primary" href="mailto:chandler@bybeeco.net">Request an intro</a>
-        <a class="button ghost" href="#services">See services</a>
+        <a class="button ghost" href="#services" data-nav>See services</a>
       </div>
 
       <div class="badges" aria-label="Capabilities">
@@ -58,8 +72,10 @@
       </div>
     </section>
 
-    <section id="services" class="section">
+    <!-- SERVICES VIEW -->
+    <section class="view section" data-view="services" id="services" hidden>
       <h2>Services</h2>
+
       <div class="grid">
         <div class="card">
           <h3>AI task bots</h3>
@@ -76,8 +92,10 @@
       </div>
     </section>
 
-    <section id="approach" class="section">
+    <!-- APPROACH VIEW -->
+    <section class="view section" data-view="approach" id="approach" hidden>
       <h2>Approach</h2>
+
       <div class="split">
         <div class="card">
           <h3>Deployed inside your tenant</h3>
@@ -85,6 +103,7 @@
             Solutions are built within your existing Microsoft environment. You retain ownership of your data, licenses, and access controls.
           </p>
         </div>
+
         <div class="card">
           <h3>Simple, secure, maintainable</h3>
           <p>
@@ -98,12 +117,15 @@
       </div>
     </section>
 
-    <section id="about" class="section">
+    <!-- ABOUT VIEW -->
+    <section class="view section" data-view="about" id="about" hidden>
       <h2>About</h2>
+
       <div class="card">
         <p>
           BybeeCo is a Missouri-based systems and automation firm founded by Chandler Bybee. The company focuses on practical automation and internal tools for regulated and professional organizations.
         </p>
+
         <p class="contact">
           Email: <a href="mailto:chandler@bybeeco.net">chandler@bybeeco.net</a>
         </p>
@@ -116,10 +138,12 @@
         <a href="mailto:chandler@bybeeco.net">Contact</a>
       </div>
     </footer>
+
   </main>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="app.js"></script>
 </body>
 </html>
