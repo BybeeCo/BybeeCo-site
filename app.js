@@ -67,6 +67,12 @@
   menuOverlay.hidden = true;
 });
 
+document.getElementById("mobileMenu").addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    closeMenu();
+  }
+});
+
   function closeMenu() {
     if (!menuBtn || !menuOverlay || !mobileMenu) return;
     menuBtn.setAttribute("aria-expanded", "false");
